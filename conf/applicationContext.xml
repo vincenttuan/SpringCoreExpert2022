@@ -19,7 +19,84 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">    
     
-    <bean id="hello" class="com.spring.core.beans.Hello" />
+    <bean id="hello" class="com.spring.core.session01.beans.Hello" />
     
+    <bean id="lotto" 
+    	scope="prototype"
+    	class="com.spring.core.session02.beans.Lotto" />
+	
+	<!-- Author -->
+	<bean id="author" class="com.spring.core.session02.beans.Author" />
+	
+	<bean id="author2" class="com.spring.core.session02.beans.Author">
+		<!-- 方法注入  -->
+		<property name="name">
+			<value>John</value>
+		</property>
+		<property name="sex">
+			<value>男</value>
+		</property>
+		<property name="age">
+			<value>
+				28
+			</value>
+		</property>
+	</bean>
+	
+	<bean id="author3" class="com.spring.core.session02.beans.Author">
+		<!-- 建構子注入 -->
+		<constructor-arg index="0" value="Mary" />
+		<constructor-arg index="1" value="女" />
+		<constructor-arg index="2" value="21" />
+	</bean>
+	
+	<bean id="author4" 
+		  p:name="Helen" p:sex="女" p:age="22"
+		  class="com.spring.core.session02.beans.Author" />
+	
+	<bean id="author5" 
+		  c:name="Tom" c:sex="男" c:age="30"
+		  class="com.spring.core.session02.beans.Author" />
+		  
+	<!-- Book -->
+	<bean id="book" class="com.spring.core.session02.beans.Book" />
+	
+	<bean id="book2" class="com.spring.core.session02.beans.Book">
+		<property name="name">
+			<value>Java</value>
+		</property>
+		<property name="price">
+			<value>500</value>
+		</property>
+		<property name="author" ref="author2" />
+	</bean>
+	
+	<bean id="book3" class="com.spring.core.session02.beans.Book">
+		<constructor-arg index="0" value="Spring" />
+		<constructor-arg index="1" value="600" />
+		<constructor-arg index="2" ref="author3" />
+	</bean>
+	
+	<bean id="book4" 
+		  p:name="Python" p:price="300" p:author-ref="author4"
+		  class="com.spring.core.session02.beans.Book" />
+	
+	<bean id="book5" 
+		  c:name="Python" c:price="300" c:author-ref="author5"
+		  class="com.spring.core.session02.beans.Book" />
+		  
+	<!-- Color、Size、Paper -->
+	<!-- 手動配置（字面值配置） -->
+	<bean id="color" p:name="white" class="com.spring.core.session02.beans.Color" />
+	<bean id="size" p:name="A4" class="com.spring.core.session02.beans.Size" />
+	<bean id="paper" 
+		  p:id="1" p:color-ref="color" p:size-ref="size" 
+		  class="com.spring.core.session02.beans.Paper" />
 	
 </beans>
+
+
+
+
+
+
