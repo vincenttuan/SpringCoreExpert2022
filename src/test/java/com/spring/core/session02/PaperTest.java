@@ -20,5 +20,8 @@ public class PaperTest {
 		PaperRedB3 paper3 = ctx.getBean("paper3", PaperRedB3.class);
 		System.out.println(paper3); // 資料已注入
 		
+		Paper paper4 = ctx.getBean("paper4", Paper.class);
+		System.out.println(paper4); // 資料已注入
+		
 	}
 }

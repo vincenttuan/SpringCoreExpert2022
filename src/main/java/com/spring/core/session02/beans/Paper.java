@@ -5,6 +5,21 @@ public class Paper {
 	private Color color; // 顏色
 	private Size size; // 尺寸
 	
+	public Paper() {
+	}
+	
+	public Paper(Color color, Size size) {
+		this.color = color;
+		this.size = size;
+	}
+	
+	/*
+	public Paper(Color red, Size b3) {
+		this.color = red;
+		this.size = b3;
+	}
+	*/
+	
 	public Integer getId() {
 		return id;
 	}

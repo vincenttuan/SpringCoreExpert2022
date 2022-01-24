@@ -106,9 +106,13 @@
 		  p:id="1" autowire="byName" 
 		  class="com.spring.core.session02.beans.Paper" />
 	 
-	 <bean id="paper3" 
+	<bean id="paper3" 
 		  p:id="2" autowire="byName" 
 		  class="com.spring.core.session02.beans.PaperRedB3" />
+	
+	<bean id="paper4" 
+		  p:id="1001" autowire="constructor" 
+		  class="com.spring.core.session02.beans.Paper" />
 </beans>
 
 
