@@ -87,12 +87,28 @@
 		  
 	<!-- Color、Size、Paper -->
 	<!-- 手動配置（字面值配置） -->
-	<bean id="color" p:name="white" class="com.spring.core.session02.beans.Color" />
+	<bean id="color" p:name="White" class="com.spring.core.session02.beans.Color" />
 	<bean id="size" p:name="A4" class="com.spring.core.session02.beans.Size" />
+	<bean id="red" p:name="Red" class="com.spring.core.session02.beans.Color" />
+	<bean id="b3" p:name="B3" class="com.spring.core.session02.beans.Size" />
 	<bean id="paper" 
 		  p:id="1" p:color-ref="color" p:size-ref="size" 
 		  class="com.spring.core.session02.beans.Paper" />
+	<!-- 自動配置 -->
 	
+	<!-- 可匹配的超過1個，就不可使用 byType，例如 color、red 都是 Color 型別 -->
+	<!-- 
+	<bean id="paper2" 
+		  p:id="1" autowire="byType" 
+		  class="com.spring.core.session02.beans.Paper" />
+	-->
+	<bean id="paper2" 
+		  p:id="1" autowire="byName" 
+		  class="com.spring.core.session02.beans.Paper" />
+	 
+	 <bean id="paper3" 
+		  p:id="2" autowire="byName" 
+		  class="com.spring.core.session02.beans.PaperRedB3" />
 </beans>
 
 
