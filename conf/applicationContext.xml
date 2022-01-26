@@ -113,6 +113,116 @@
 	<bean id="paper4" 
 		  p:id="1001" autowire="constructor" 
 		  class="com.spring.core.session02.beans.Paper" />
+		  
+	<!-- 引用外部資源 -->
+	<context:property-placeholder location="data.properties" />
+	
+	<!-- 建立 Clazz 實例並使用外部資源來注入屬性資料，使用語法：${ xxx } -->
+	<bean id="clazz1" 
+		  p:id="1"
+		  p:name="${clazz.name}"
+		  p:credit="${clazz.credit}"
+		  class="com.spring.core.session03.beans.Clazz" />
+	
+	<bean id="clazz2" p:id="2" p:name="English" p:credit="2"
+		  class="com.spring.core.session03.beans.Clazz" />
+	
+	<bean id="clazz3" p:id="3" p:name="Math" p:credit="1"
+		  class="com.spring.core.session03.beans.Clazz" />
+	
+	<!-- 學生 1 配置 -->
+	<bean id="student1" 
+		  p:id="1" p:name="John"
+		  class="com.spring.core.session03.beans.Student">
+		  <!-- Set 集合配置 -->
+		  <property name="clazzs">
+		  	<set>
+		  		<ref bean="clazz1" />
+		  		<ref bean="clazz2" />
+		  		<ref bean="clazz3" />
+		  	</set>
+		  </property>
+	</bean>
+	
+	<!-- 學生 2 配置 -->
+	<bean id="student2" 
+		  p:id="2" p:name="Mary"
+		  class="com.spring.core.session03.beans.Student">
+		  <!-- Set 集合配置 -->
+		  <property name="clazzs">
+		  	<set>
+		  		<ref bean="clazz1" />
+		  		<ref bean="clazz3" />
+		  	</set>
+		  </property>
+	</bean>
+	
+	<!-- 講師 1 配置 -->
+	<bean id="teacher1" 
+		  p:id="1" p:name="Bob"
+		  class="com.spring.core.session03.beans.Teacher">
+		<!-- Set 集合配置 -->
+		<property name="students">
+			<set>
+				<ref bean="student1" />
+				<ref bean="student2" />
+			</set>
+		</property>
+		<!-- List 集合配置 -->
+		<property name="subjects">
+			<list>
+				<value>Program</value>
+				<value>English</value>
+			</list>
+		</property>
+		<!-- Map 集合配置（每一個元素是一個 entry -> key / value） -->
+		<property name="salary">
+			<map>
+				<entry key="base">
+					<value>50000</value>
+				</entry>
+				<entry key="addition">
+					<value>20000</value>
+				</entry>
+			</map>
+		</property>	  
+	</bean>
+	
+	<!-- 利用 util:set、util:list、util:map 簡化配置 -->
+	<util:set id="students">
+		<ref bean="student1" />
+		<ref bean="student2" />
+	</util:set>
+	
+	<util:list id="subjects">
+		<value>Java</value>
+		<value>English</value>
+		<value>Math</value>
+	</util:list>
+	
+	<util:map id="salary">
+		<entry>
+			<key>
+				<value>base</value>
+			</key>
+			<value>65000</value>
+		</entry>
+		<entry>
+			<key>
+				<value>addition</value>
+			</key>
+			<value>32000</value>
+		</entry>
+	</util:map>
+	
+	<!-- 講師 2 配置 -->
+	<bean id="teacher2" 
+		  p:id="2" p:name="Jean"
+		  p:students-ref="students"
+		  p:subjects-ref="subjects"
+		  p:salary-ref="salary"
+		  class="com.spring.core.session03.beans.Teacher" />
+		  
 </beans>
 
 
