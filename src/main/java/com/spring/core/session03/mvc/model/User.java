@@ -5,16 +5,36 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
+@PropertySource("classpath:user.properties")
 public class User {
 	
+	//@Value(value = "John")
+	@Value("${user.username}")
 	private String username; // 姓名
+	
+	//@Value(value = "18")
+	@Value("${user.age}")
 	private Integer age; // 年齡
+	
+	//@Value(value = "#{${nickname: {'A', 'B'}}}")
+	@Value("${user.nickname}")
 	private String[] nickname; // 暱稱
+	
+	//@Value(value = "#{${subjects: {'Java', 'Math'}}}")
+	@Value("${user.subjects}")
 	private Set<String> subjects; // 科目
+	
+	//@Value(value = "#{${scores: {100, 90}}}")
+	@Value("#{'${user.scores}'.split(',')}")
 	private List<Integer> scores; // 成績
+	
+	//@Value(value = "#{${hobbies: {'k1': 'Car', 'k2': 'Game'}}}")
+	@Value("#{${user.hobbies}}")
 	private Map<String, String> hobbies; // 興趣
 	
 	public String getUsername() {
