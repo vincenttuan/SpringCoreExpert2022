@@ -222,7 +222,16 @@
 		  p:subjects-ref="subjects"
 		  p:salary-ref="salary"
 		  class="com.spring.core.session03.beans.Teacher" />
-		  
+	
+	<!-- init-method、destroy-method 配置-->	
+	<bean id="dbconn"
+		init-method="init" 
+		destroy-method="destroy"
+		class="com.spring.core.session03.beans.DBConn" />
+	
+	<!-- 利用 BeanFactory 建立實體 -->
+	<bean id="carFactory" scope="singleton" class="com.spring.core.session03.beans.CarFactory" />
+	
 </beans>
 
 
