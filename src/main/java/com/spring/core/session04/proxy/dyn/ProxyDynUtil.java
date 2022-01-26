@@ -25,16 +25,19 @@ public class ProxyDynUtil {
 			Object result = null;
 			try {
 				// Before: 前置通知
-				System.out.println("Before: 前置通知");
+				//System.out.println("Before: 前置通知");
+				MyLogger.before(object.getClass(), method.getName(), args);
 				// 調用業務方法/邏輯
 				result = method.invoke(object, args);
 				return result;
 			} catch (Exception e) {
 				// Exception: 例外異常通知
-				System.out.println("Exception: 例外異常通知");
+				//System.out.println("Exception: 例外異常通知");
+				MyLogger.throwing(object.getClass(), e.toString());
 			} finally {
 				// End: 後置通知
-				System.out.println("End: 後置通知");
+				//System.out.println("End: 後置通知");
+				MyLogger.end(object.getClass(), method.getName(), result);
 			}
 			return result;
 		};
