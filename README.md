@@ -12,5 +12,9 @@
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/main/java/com/spring/core/session03">Session 03 - Spring IOC/DI (反轉控制與注入-2)</a><br />
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/test/java/com/spring/core/session03">Session 03 - Spring IOC/DI (反轉控制與注入-2)(測試)</a>
   </li>
+    <li>
+      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/main/java/com/spring/core/session04">Session 04 - 代理模式與Spring AOP</a><br />
+      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/test/java/com/spring/core/session04">Session 04 - 代理模式與Spring AOP(測試)</a>
+  </li>
   
 <ul>
