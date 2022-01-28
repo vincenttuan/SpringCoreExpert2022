@@ -23,7 +23,10 @@
   <li>
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/main/java/com/spring/core/session05">Session 05 - Spring AOP</a><br />
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/test/java/com/spring/core/session05">Session 05 - 測試</a><br />
-      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/blob/main/conf/aop-config.xml">Session 05 - 配置檔 aop-config.xml</a>
+      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/blob/main/conf/aop-config.xml">Session 05 - 配置檔 aop-config.xml</a><br />
+      &lt;!-- 讓 Spring AOP 切面自動代理 --&gt;<br />
+      &lt;aop:aspectj-autoproxy proxy-target-class="true" /&gt;
+      <br />
   </li>
   
 <ul>
