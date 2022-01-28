@@ -37,5 +37,4 @@ public class Audience {
 		System.out.println("觀眾-退票！退票！並離場");
 	}
 	
-	
 }

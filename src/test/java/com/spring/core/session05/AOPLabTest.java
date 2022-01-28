@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.spring.core.session05.aop_lab.AOPConfig;
 import com.spring.core.session05.aop_lab.Performance;
+import com.spring.core.session05.aop_lab.Singer;
 
 public class AOPLabTest {
 	
@@ -18,6 +19,13 @@ public class AOPLabTest {
 			dancer.perform();
 		} catch (Exception e) {
 			System.out.println(e);
+			// 轉換跑道
+			// dancer 透過 introducter(經紀人) 轉換跑道
+			// 例如改行去唱歌或當主持人
+			System.out.println("舞者轉歌者");
+			Singer singer = (Singer)dancer; // 舞者轉歌者
+			singer.sing();
+			
 		}
 	}
 }
