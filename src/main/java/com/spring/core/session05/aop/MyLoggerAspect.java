@@ -17,7 +17,7 @@ public class MyLoggerAspect {
 	
 	// 前置通知 Advice
 	// Spring EL：execution(...)
-	@Before(value = "execution(public com.spring.core.session05.aop.CalcImpl.add(Integer x, Integer y))")
+	@Before(value = "execution(public Integer com.spring.core.session05.aop.CalcImpl.add(Integer, Integer))") // 切入點表達式
 	public void beforeAdvice(JoinPoint joinPoint) { // JoinPoint 連接點
 		String methodName = joinPoint.getSignature().getName(); // 取得連接點的方法簽章的名稱
 		Object[] args = joinPoint.getArgs();
