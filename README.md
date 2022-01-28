@@ -13,7 +13,7 @@
   <li>
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/main/java/com/spring/core/session03">Session 03 - Spring IOC/DI (反轉控制與注入-2)</a><br />
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/test/java/com/spring/core/session03">Session 03 - 測試</a><br />
-      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/blob/main/conf/applicationContext.xml">Session 03 - 配置檔 applicationContext.xml</a>
+      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/blob/main/conf/applicationContext2.xml">Session 03 - 配置檔 applicationContext2.xml</a>
   </li>
     <li>
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/main/java/com/spring/core/session04">Session 04 - 代理模式</a><br />
@@ -21,7 +21,8 @@
   </li>
   <li>
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/main/java/com/spring/core/session05">Session 05 - Spring AOP</a><br />
-      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/test/java/com/spring/core/session05">Session 05 - 測試</a>
+      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/test/java/com/spring/core/session05">Session 05 - 測試</a><br />
+      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/blob/main/conf/applicationContext2.xml">Session 05 - 配置檔 applicationContext2.xml</a>
   </li>
   
 <ul>
