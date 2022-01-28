@@ -1,0 +1,18 @@
+-- 建立 mydb 資料庫
+-- 執行 SQLiteCreateDatabaseAndConnectionTest.java 
+
+-- 建立 Emp 資料表
+create table emp (
+    eid integer PRIMARY KEY, -- 主鍵 (自行產生序號: 1, 2, 3, ...)
+    ename text, -- 員工姓名
+    age integer, -- 員工年齡
+    createtime datetime default current_timestamp -- 建檔時間
+);
+
+-- 建立 Emp 範例資料
+insert into emp(ename, age) values('john', 28);
+insert into emp(ename, age) values('mary', 30);
+insert into emp(ename, age) values('bobo', 29);
+
+-- 查詢 Emp 資料
+select eid, ename, age, createtime from emp;
