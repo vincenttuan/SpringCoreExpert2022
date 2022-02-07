@@ -16,3 +16,25 @@ insert into emp(ename, age) values('bobo', 29);
 
 -- 查詢 Emp 資料
 select eid, ename, age, createtime from emp;
+
+-- 建立交易資料表
+-- book(書籍)、stock(庫存)、wallet(錢包)
+
+create table book ( -- book(書籍)
+	book_id integer, -- 書號
+    book_name text, -- 書名
+    book_price integer -- 價格
+);
+
+create table stock ( -- stock(庫存)
+    book_id integer, -- 書號
+    book_amount integer -- 數量
+);
+
+create table wallet (
+    username text, -- 客戶名稱
+    balance integer -- 餘額
+);
+
+
+
