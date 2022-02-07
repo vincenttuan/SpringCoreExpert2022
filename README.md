@@ -34,4 +34,9 @@
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/blob/main/db/sql.txt">SQLite - 相關資料庫、表建立</a><br />
       <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/test/java/com/spring/core/session06">Session 06 - 測試</a>
   </li>
+  <li>
+      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/main/java/com/spring/core/session07">Session 07 - Transaction 交易模式</a><br />
+      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/blob/main/db/sql.txt">SQLite - 相關資料庫、表建立</a><br />
+      <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/src/test/java/com/spring/core/session07">Session 07 - 測試</a>
+  </li>
 <ul>
