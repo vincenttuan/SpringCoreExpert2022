@@ -22,7 +22,8 @@ public class BookServiceImpl implements BookService {
 		// 修改 Wallet 餘額
 		bookDao.updateWallet(username, price);
 	}
-
+	
+	@Transactional
 	@Override
 	public void buyMany(String username, Integer... bookIds) {
 		for(Integer bookId : bookIds) {
