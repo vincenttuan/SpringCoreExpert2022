@@ -61,5 +61,19 @@ public class EmpDaoImpl implements EmpDao {
 		int[] rowcounts = jdbcTemplate.batchUpdate(sql, list);
 		return rowcounts;
 	}
+
+	@Override
+	public int update(Integer eid, String ename, Integer age) {
+		String sql = "Update emp Set ename=?, age=? Where eid=?";
+		int rowcount = jdbcTemplate.update(sql, ename, age, eid);
+		return rowcount;
+	}
+
+	@Override
+	public int delete(Integer eid) {
+		String sql = "Delete From emp Where eid=?";
+		int rowcount = jdbcTemplate.update(sql, eid);
+		return rowcount;
+	}
 	
 }

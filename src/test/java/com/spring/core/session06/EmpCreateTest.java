@@ -19,8 +19,8 @@ public class EmpCreateTest {
 		EmpDao empDao = ctx.getBean(EmpDao.class);
 		
 		// 新增單筆-測試
-		//int rowcount = empDao.create("Jo", 21);
-		//System.out.printf("新增單筆: %d\n", rowcount);
+		int rowcount = empDao.create("Jo", 21);
+		System.out.printf("新增單筆: %d\n", rowcount);
 		
 		// 新增多筆-測試
 		List<Object[]> list = new ArrayList<>();

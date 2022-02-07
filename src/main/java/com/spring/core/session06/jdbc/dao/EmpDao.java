@@ -22,5 +22,10 @@ public interface EmpDao {
 	// 新增多筆
 	int[] batchCreate(List<Object[]> list);
 	
+	// 修改
+	int update(Integer eid, String ename, Integer age);
+	
+	// 刪除
+	int delete(Integer eid);
 	
 }
