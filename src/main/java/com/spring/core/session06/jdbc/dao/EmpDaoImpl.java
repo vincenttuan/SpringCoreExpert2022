@@ -47,5 +47,19 @@ public class EmpDaoImpl implements EmpDao {
 		Integer count = jdbcTemplate.queryForObject(sql, Integer.class);
 		return count;
 	}
+
+	@Override
+	public int create(String name, Integer age) {
+		String sql = "Insert into emp(ename, age) values(?, ?)";
+		int rowcount = jdbcTemplate.update(sql, name, age);
+		return rowcount;
+	}
+
+	@Override
+	public int[] batchCreate(List<Object[]> list) {
+		String sql = "Insert into emp(ename, age) values(?, ?)";
+		int[] rowcounts = jdbcTemplate.batchUpdate(sql, list);
+		return rowcounts;
+	}
 	
 }
