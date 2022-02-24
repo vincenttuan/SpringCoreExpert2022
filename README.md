@@ -1,4 +1,8 @@
 # 第一階段：Java 企業產訓 SpringCore 篇
+測試通過版本：<br />
+&lt;spring.version>5.2.19.RELEASE&lt;/spring.version><br />
+&lt;spring.version>4.3.28.RELEASE&lt;/spring.version><p />
+
 <b><a href="https://github.com/vincenttuan/SpringMVCExpert2022">第二階段：Java 企業產訓 SpringMVC 篇：Session 08 ~ Session 20</a></b><p />
 <a href="./pom.xml">Maven 配置檔：pom.xml</a><br />
 <a href="https://github.com/vincenttuan/SpringCoreExpert2022/tree/main/conf">Spring 配置檔：*.xml</a><p />
